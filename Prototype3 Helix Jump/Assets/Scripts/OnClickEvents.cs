@@ -5,13 +5,13 @@ public class OnClickEvents : MonoBehaviour
 {
     public TextMeshProUGUI soundsText;
 
-    void Start()
-    {
-        if (GameManager.mute)
-            soundsText.text = "/";
-        else
-            soundsText.text = "";
-    }
+    //void Start()
+    //{
+    //    if (GameManager.mute)
+    //        soundsText.text = "/";
+    //    else
+    //        soundsText.text = "";
+    //}
 
     public void ToggleMute()
     {

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Ring : MonoBehaviour
@@ -18,7 +19,13 @@ public class Ring : MonoBehaviour
             GameManager.score++;
             GameManager.numberOfPassedRings++;
             FindObjectOfType<AudioManager>().Play("Whoosh");
-            Destroy(gameObject);
+            StartCoroutine(DestroyCouroitine());
         }
+    }
+
+    private IEnumerator DestroyCouroitine()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 }

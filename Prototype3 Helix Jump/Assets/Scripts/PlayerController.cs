@@ -23,12 +23,12 @@ public class PlayerController : MonoBehaviour
         if (materialName == "Safe (Instance)")
         {
             //The ball hits the safe area
-        } else if (materialName == "Unsafe (Instance)")
+        } else if (materialName == "Spikes (Instance)")
         {
             //The ball hits the unsafe area
             GameManager.gameOver = true;
             audioManager.Play("Game Over");
-        } else if (materialName == "LastRing (Instance)" && !GameManager.levelCompleted)
+        } else if (materialName == "Sandy Orange (Instance)" && !GameManager.levelCompleted)
         {
             //We completed the Level
             GameManager.levelCompleted = true;
